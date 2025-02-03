@@ -21,6 +21,7 @@ app.set('view engine', 'ejs')
 //middleware
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
+app.use(express.static('public'));
 
 //routes
 app.get('/products', async (req, res) => {
